@@ -15,4 +15,3 @@
     <a href="{{url('contatos/')}}" class="btn btn-secondary">Voltar</a>
     {{Form::close()}}
 @endsection
-
