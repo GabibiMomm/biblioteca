@@ -2,6 +2,17 @@
 @section('title','Alteração Contato {{$contato->nome}}')
 @section('content')
     <h1>Alteração Contato {{$contato->nome}}</h1>
+    @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>
+                        {{$error}}
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     @if(Session::has('mensagem'))
         <div class="alert alert-success">
             {{Session::get('mensagem')}}
