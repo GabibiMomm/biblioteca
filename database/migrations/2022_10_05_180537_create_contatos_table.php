@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contatos', function (Blueprint $table) {
+        Schema::create('livros', function (Blueprint $table) {
             $table->id();
-            $table->string('nome');
-            $table->string('email');
-            $table->string('telefone');
-            $table->string('cidade');
-            $table->string('estado');
+            $table->string('titulo', 200);
+            $table->string('descricao');
+            $table->string('autor', 200);
+            $table->string('editora', 100);
+            $table->string('ano');
             $table->timestamps();
         });
     }
